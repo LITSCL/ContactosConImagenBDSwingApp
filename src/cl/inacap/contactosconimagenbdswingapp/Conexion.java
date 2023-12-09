@@ -8,21 +8,21 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class Conexion {
-	private final String servidor = "localhost"; //Direcci�n del servidor.
+	private final String servidor = "localhost"; //Dirección del servidor.
 	private final String baseDeDatos = "dbcontactosconimagenbdswingapp"; //Nombre de la base de datos.
 	private final String usuario = "root"; //Usuario para conectarse al dbms.
-	private final String clave = "root"; //Contrase�a para conectarse al dbms.
+	private final String clave = "root"; //Contraseña para conectarse al dbms.
 	
-	//M�todo que conecta el programa a la base de datos.
+	//Método que conecta el programa a la base de datos.
 	public Connection conectar() {
 		Connection conexion = null;
 		try {
-			String url = "jdbc:mysql://" + servidor + ":3306/" + baseDeDatos; //Esta es la url de conexi�n para la base de datos.
+			String url = "jdbc:mysql://" + servidor + ":3306/" + baseDeDatos; //Esta es la url de conexión para la base de datos.
 			Class.forName("com.mysql.cj.jdbc.Driver"); //Class.forName es necesario para registrar el driver a utilizar.
-			conexion = DriverManager.getConnection(url, usuario, clave); //Este m�todo trata de establecer la conexi�n a la base de datos entregada utilizando el driver registrado.
-			System.out.println("Conexi�n BD: True");
+			conexion = DriverManager.getConnection(url, usuario, clave); //Este método trata de establecer la conexión a la base de datos entregada utilizando el driver registrado.
+			System.out.println("Conexión BD: True");
 		} catch (Exception ex) {
-			System.out.println("Conexi�n BD: False");
+			System.out.println("Conexión BD: False");
 		}
 		return conexion;
 	}
@@ -33,9 +33,9 @@ public class Conexion {
 		try {
 			PreparedStatement st = conexion.prepareStatement("SELECT * FROM contacto");
 			rs = st.executeQuery();
-			System.out.println("Ejecuci�n SQL: True");
+			System.out.println("Ejecución SQL: True");
 		} catch (Exception ex) {
-			System.out.println("Ejecuci�n SQL: False");
+			System.out.println("Ejecución SQL: False");
 		}
 		return rs;
 	}
@@ -52,9 +52,9 @@ public class Conexion {
 			st.setString(1, nombre);
 			st.setBinaryStream(2, fis);
 			st.executeUpdate(); //Se ejecuta la consulta SQL.
-			System.out.println("Ejecuci�n SQL: True");
+			System.out.println("Ejecución SQL: True");
 		} catch (Exception ex) {
-			System.out.println("Ejecuci�n SQL: False");
+			System.out.println("Ejecución SQL: False");
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class MostrarTabla {
 		Connection conexion = co.conectar();
 		ResultSet rs = co.visualizar();
 		
-		tabla.setDefaultRenderer(Object.class, new TablaImagen()); //Aca se llama al m�todo que renderiza la tabla para que permita mostrar JLabel.
+		tabla.setDefaultRenderer(Object.class, new TablaImagen()); //Aca se llama al método que renderiza la tabla para que permita mostrar JLabel.
 		
 		DefaultTableModel mo = new DefaultTableModel();
 		mo.addColumn("Nombre");

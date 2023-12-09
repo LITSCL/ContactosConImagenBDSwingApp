@@ -128,8 +128,8 @@ public class StartFrame extends JFrame {
 		if (ap == JFileChooser.APPROVE_OPTION) {
 			ruta = fc.getSelectedFile().getAbsolutePath();
 			Image imagen = getToolkit().getImage(ruta);
-			imagen = imagen.getScaledInstance(256, 256, Image.SCALE_DEFAULT); //Se redimensiona el tamaño de la imagen (Deben ser las mismas dimensiones que el JLabel).
-			lblImagen.setIcon(new ImageIcon(imagen)); //Se le añade la imagen al JLabel.
+			imagen = imagen.getScaledInstance(256, 256, Image.SCALE_DEFAULT); //Se redimensiona el tamaÃ±o de la imagen (Deben ser las mismas dimensiones que el JLabel).
+			lblImagen.setIcon(new ImageIcon(imagen)); //Se le aÃ±aade la imagen al JLabel.
 			lblURL.setText(ruta);
 		}
 	}
