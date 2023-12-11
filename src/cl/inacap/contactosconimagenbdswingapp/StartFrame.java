@@ -20,10 +20,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 
 public class StartFrame extends JFrame {
-
 	private JPanel contentPane;
 	private JTextField textFieldNombre;
-	String ruta = null;
 	private JLabel lblImagen;
 	private JButton btnAbrirFoto;
 	private JButton btnMostrarTabla;
@@ -31,6 +29,7 @@ public class StartFrame extends JFrame {
 	private JLabel lblURL;
 	private JScrollPane scrollPane;
 	private JTable tableContactos;
+	String ruta = null;
 	/**
 	 * Launch the application.
 	 */
